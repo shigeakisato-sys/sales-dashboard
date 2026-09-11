@@ -11,6 +11,7 @@ from typing import List, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
@@ -23,6 +24,14 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 app = FastAPI(title="Sales Dashboard Chat")
+
+# GitHub Pagesなど別オリジンのフロントから叩けるようにする。認証情報は使わないので全許可で問題ない。
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["POST", "GET"],
+    allow_headers=["*"],
+)
 
 _client = None
 if OPENAI_API_KEY:
