@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sales-dashboard",
+      "runtimeExecutable": "C:\\Users\\9520031\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "runtimeArgs": ["app.py"],
+      "port": 5050
+    },
+    {
+      "name": "dashboard-static-preview",
+      "runtimeExecutable": "C:\\Users\\9520031\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "5051"],
+      "port": 5051
+    }
+  ]
+}
