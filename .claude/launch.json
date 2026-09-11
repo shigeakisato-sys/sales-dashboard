@@ -12,6 +12,12 @@
       "runtimeExecutable": "C:\\Users\\9520031\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
       "runtimeArgs": ["-m", "http.server", "5051"],
       "port": 5051
+    },
+    {
+      "name": "dashboard-chat",
+      "runtimeExecutable": "C:\\Users\\9520031\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "runtimeArgs": ["chat_server.py"],
+      "port": 8000
     }
   ]
 }
